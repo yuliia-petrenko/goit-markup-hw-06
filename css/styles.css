@@ -68,7 +68,6 @@ fieldset {
   overflow: hidden;
 }
 .container {
-  /* width: 1158px; */
   width: 100%;
   margin: 0 auto;
   padding: 0 16px 0 16px;
@@ -86,6 +85,7 @@ fieldset {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    /* width: 100%; */
   }
 }
 section {
@@ -98,10 +98,15 @@ section {
 }
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .header-inner {
+    justify-content: space-between;
+  }
 }
 .header-list {
   display: flex;
@@ -117,15 +122,19 @@ section {
   font-weight: 700;
   letter-spacing: 0.03em;
   font-family: 'Raleway', sans-serif;
-  margin-right: 76px;
+  margin-right: 120px;
   padding: 16px 0;
+}
+@media screen and (min-width: 1158px) {
+  .header-meny {
+    margin-right: 76px;
+  }
 }
 .header-meny {
   display: flex;
   gap: 40px;
   align-items: center;
   flex-grow: 1;
-  /* position: absolute; */
 }
 @media only screen and (max-width: 767.98px) {
   .header-meny {
@@ -137,6 +146,12 @@ section {
     margin-right: 122px;
   }
 }
+@media screen and (min-width: 1158px) {
+  .header-meny {
+    justify-content: space-between;
+  }
+}
+
 .header-meny-list {
   display: flex;
   color: var(--color-text);
@@ -185,14 +200,12 @@ section {
   letter-spacing: 0.04em;
 }
 @media screen and (min-width: 1158px) {
-  .adress-nav {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+  .adress {
+    display: flex;
+    justify-content: flex-end;
   }
 }
+
 .adress-nav {
   display: flex;
 }
@@ -205,15 +218,20 @@ section {
   .adress-nav {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     gap: 12px;
   }
 }
 @media screen and (min-width: 1158px) {
   .adress-nav {
     flex-direction: row;
-    justify-items: flex-end;
+    /* justify-items: flex-end; */
+    justify-content: space-between;
     gap: 40px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -232,11 +250,10 @@ section {
 .header-group {
   border: none;
   background-color: var(--color-wite);
-  /* margin-left: 16px; */
 }
 @media screen and (min-width: 768px) {
   .header-group {
-    opacity: 0;
+    display: none;
   }
 }
 .header-svg {
@@ -249,7 +266,6 @@ section {
 /* Hero section-1 */
 
 .hero-logo {
-  /* max-width: 1440px; */
   width: 100%;
   max-width: 320px;
   max-height: 432px;
@@ -327,9 +343,6 @@ section {
   }
 }
 .hero-slogan {
-  /* font-size: 56px;
-  line-height: 1.07;*/
-  /* max-width: 496px; */
   max-width: 288px;
   max-height: 160px;
   font-size: 36px;
@@ -347,6 +360,7 @@ section {
   .hero-slogan {
     max-width: 496px;
     max-height: 120px;
+    line-height: 1.07;
     margin-bottom: 36px;
   }
 }
@@ -369,8 +383,6 @@ section {
   text-transform: capitalize;
   padding: 16px 32px;
   border-radius: 4px;
-  /* margin-top: 48px; */
-  /* margin-top: 72px; */
   min-width: 169px;
   height: 56px;
   border: none;
@@ -387,7 +399,6 @@ section {
 /* deteils section-2 */
 .adventege-section {
   background-color: var(--color-wite);
-  /* padding: 120px 0; */
   padding: 96px 0;
 }
 @media screen and (min-width: 1158px) {
@@ -398,7 +409,6 @@ section {
 .adventege-list {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 24px; */
   gap: 72px;
   justify-content: center;
 }
@@ -416,7 +426,6 @@ section {
 }
 
 .adventege-item {
-  /* flex-basis: calc((100% - 3 * 24px) / 4); */
   flex-basis: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -452,10 +461,6 @@ section {
 }
 .category {
   color: var(--color-text);
-  /* font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2;
-   */
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
@@ -480,10 +485,7 @@ section {
 }
 
 .text-category {
-  /*
-  font-weight: 400; */
   color: var(--color-list);
-
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -538,8 +540,6 @@ section {
 }
 .team-frame {
   background-color: var(--color-wite);
-  /* flex-basis: calc((100% - 72px) / 4); */
-  /* flex-basis: 100%; */
   border-radius: 0 0 4px 4px;
   box-shadow: 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -644,7 +644,6 @@ section {
   width: 100%;
   border: 1px solid var(--color-section);
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  /* width: calc((100% - 48px) / 3); */
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -740,10 +739,6 @@ section {
 
 .foot-section {
   display: block;
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* gap: 120px; */
-  /* gap: 72px; */
   background-color: var(--color-text);
   color: var(--color-section);
   font-family: 'Raleway', sans-serif;
@@ -756,7 +751,6 @@ section {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  /* margin-bottom: 72px; */
 }
 @media screen and (min-width: 768px) {
   .foot-inner {
@@ -765,11 +759,9 @@ section {
   }
 }
 .foot-logo {
-  /* display: inline-block; */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 16px; */
   margin-bottom: 17px;
   font-family: 'Raleway', sans-serif;
   color: var(--color-logo-but);
@@ -817,7 +809,6 @@ section {
   }
 }
 .footer-social {
-  /* margin-right: 96px; */
   text-align: center;
 }
 @media screen and (min-width: 1158px) {
@@ -861,8 +852,6 @@ section {
   display: flex;
   gap: 72px;
   justify-content: center;
-  /* align-items: baseline; */
-  /* align-items: center; */
 }
 @media screen and (min-width: 768px) {
   .foot-p {
@@ -878,25 +867,6 @@ section {
     padding-left: 0;
   }
 }
-/* .footer-obg {
-  display: inline-block;
-  gap: 72px;
-  align-items: center;
-  justify-content: center;
-} */
-/* @media screen and (min-width: 768px) {
-  .footer-obg {
-    display: flex;
-    gap: 24px;
-    padding-right: 108px;
-  }
-} */
-/* footer modal */
-/* @media screen and (min-width: 768px) {
-  .modal-footer {
-    padding-right: 108px;
-  }
-} */
 
 .form-footer {
   display: flex;
@@ -1212,7 +1182,6 @@ section {
 /* mobile menu */
 .menu-container {
   width: 100%;
-  /* max-width: 320px; */
   height: 100%;
   transform: translateX(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
