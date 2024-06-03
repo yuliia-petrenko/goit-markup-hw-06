@@ -37,10 +37,12 @@
               >
             </li>
             <li>
-              <a class="header-meny-list" href="">Portfolio</a>
+              <a class="header-meny-list" href="#section-portfolio"
+                >Portfolio</a
+              >
             </li>
             <li>
-              <a class="header-meny-list" href="">Contacts</a>
+              <a class="header-meny-list" href="#contacts">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -60,7 +62,7 @@
           </ul>
         </address>
         <button class="header-group">
-          <svg class="header-svg" width="24" height="24">
+          <svg class="header-svg js-open-menu" width="24" height="24">
             <use href="./images/icons.svg#icon-group"></use>
           </svg>
         </button>
@@ -320,7 +322,7 @@
         </div>
       </section>
       <!-- portfolio  section-4-->
-      <section class="portfolio-section">
+      <section id="section-portfolio" class="portfolio-section">
         <div class="container">
           <h2 class="portfolio-titel">Our portfolio</h2>
           <ul class="portfolio-item">
@@ -585,7 +587,7 @@
         </div>
       </section>
     </main>
-    <footer class="foot-section">
+    <footer id="contacts" class="foot-section">
       <div class="container foot-p">
         <div class="foot-inner">
           <a class="foot-logo" href="./index.html"
@@ -653,9 +655,9 @@
       </div>
     </footer>
     <!-- modal window -->
-    <div class="backdrop">
+    <div class="backdrop js-menu">
       <div class="modal">
-        <button class="modal-btn" type="button">
+        <button class="modal-btn js-close-menu" type="button">
           <svg class="modal-close" width="8" height="8">
             <use href="./images/icons.svg#icon-modal-close"></use>
           </svg>
@@ -799,5 +801,21 @@
         </li>
       </ul>
     </div>
+    <div class="scroll-up visually-hidden">
+      <button class="scroll-up-button">
+        <svg class="scroll-up-svg mobile" width="20" height="20">
+          <use href="/images/symbol-defs.svg#icon-arrow-scrollup"></use>
+        </svg>
+
+        <svg class="scroll-up-svg tablet" width="40" height="40">
+          <use href="/images/symbol-defs.svg#icon-arrow-scrollup"></use>
+        </svg>
+
+        <svg class="scroll-up-svg decktop" width="50" height="50">
+          <use href="/images/symbol-defs.svg#icon-arrow-scrollup"></use>
+        </svg>
+      </button>
+    </div>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
